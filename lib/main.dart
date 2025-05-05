@@ -4,31 +4,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:window_size/window_size.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
-import 'dart:io' show Platform;
 import 'providers/counter_provider.dart';
 import 'providers/todo_provider.dart';
 import 'screens/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  
-  // Configurar el tamaño de ventana solo para desktop platforms
-  // y cuando no estamos en web
-  if (!kIsWeb) {
-    try {
-      if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-        setWindowTitle('Provider Counter Example');
-        setWindowMinSize(const Size(400, 600));
-        setWindowMaxSize(Size.infinite);
-      }
-    } catch (e) {
-      print('Error setting window size: $e');
-    }
-  }
-
-  runApp(
+    runApp(
     ChangeNotifierProvider(
       create: (_) => CounterProvider(),
       child: const MyApp(),

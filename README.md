@@ -27,7 +27,6 @@ head over to the
 The project uses the following packages:
 
 - `provider` -  
-- `window_size`
 - `dio`
 
 ## Provider Access Methods
@@ -64,6 +63,6 @@ This project demonstrates modern ways to access Provider state:
    flutter run -d windows  # For Windows
    flutter run -d macos   # For macOS
    flutter run -d linux   # For Linux
-   flutter run -d chrome  # For Web
+     # For Web
    flutter run -d <device-id>  # For Android/iOS device
    ```
