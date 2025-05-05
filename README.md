@@ -12,14 +12,25 @@ It shows how you might deal with state that is modified from outside the app (fo
 state synchronized over network) and which needs to be accessed and changed
 from different parts of your app.
 
+## Project Structure
+
+The project follows a clean architecture approach using Provider:
+
+- **models/**: Contains the basic data structures
+- **providers/**: Handles business logic and state management
+- **screens/**: Contains the main screens of the application
+- **widgets/**: Contains reusable UI components
+- **main.dart**: Handles initial setup and main Provider configuration
+
 ## Getting Started
-
-The only important part of the app is the `lib/main.dart` file. It has comments that will walk you
-through it.
-
-For more information on the `provider` package (where `Provider` comes from), please
-[see the package documentation](https://pub.dartlang.org/packages/provider).
 
 For more information on state management in Flutter, and a list of other approaches,
 head over to the
 [State management page at flutter.dev](https://flutter.dev/docs/development/data-and-backend/state-mgmt).
+
+## Package Imports
+
+The project uses the following packages:
+
+- `provider`
+- `window_size`
